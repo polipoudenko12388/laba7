@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html  ng-app = 'mobilsapp'>
+<head>
+<meta charset="utf-8">
+<title> Mobile </title>
+<link rel="stylesheet" type="text/css" href="7laba_css.css"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script type="text/javascript" src="7laba_js.js"> </script>
+
+<body>
+
+  <header>
+     <img src="image/операционная-система2.svg" alt="операционная-система"> 
+    <a  href="linux.html"> <img src="image/linux.svg" alt="linux"> </a>
+    <a  href="mac.html">  <img src="image/mac2.svg" alt="mac"> </a>
+    <a  href="windows.html"><img src="image/windows.svg" alt="windows"> </a>
+   <h1>  <a  href="./7laba_html.html">  Выбор за тобой </a> </h1>   
+   <h2>  Нажми на нужный значек и переместись в прекрасный мир программ необходимой ОС </h2> 
+</header> 
+
+<main>
+  <section ng-controller='mobilController'>
+    <div ng-repeat='program in programs' ng-class="$odd ? 'odd' : 'even'">
+        <img ng-src="{{program.logo}}" alt="">
+        <div class="description">
+            <h3> Название программы: {{program.programName}}</h3>
+            <p> Операционная система: {{program.OC}}</p>
+            <p> Тип лицензии: {{program.typeLizenzia}}</p>
+            <p> Язык интерфейса: {{program.interfaceLanguage}}</p>
+            <br>
+            <p> Описание: {{program.description }}</p>
+        </div>
+        
+        <div class="download">
+            <a ng-click='download(program)'>
+                <img src="image/dowl.svg" alt="Download">
+            </a>
+            <br>
+            <p class="zag">Кол-во загрузок: <span>{{program.downloads}}</span></p> 
+        </div>
+    </div>
+</section>
+
+</main>
+</body>
+</html>

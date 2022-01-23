@@ -1,0 +1,43 @@
+*{ margin:0; padding:0; box-sizing:border-box; }
+body{
+    min-height: 100vh;  background: #3a283e;
+    display: flex;  flex-direction: column;
+    align-items: center;  row-gap: 5px;
+}
+header, main, footer{  width: 80vw;  background: #ddd;  padding: 2%;  border-radius: 30px; }
+header {
+    display: flex;  flex-wrap: wrap;
+    align-items: center;  justify-content: space-between; }
+header  a > img {  border: 2px solid #3a283e;  border-radius: 20px;  margin: 0 auto; }
+
+header img{ width: 100px; height: 100px; }
+
+header h1, h2 
+{
+    flex-basis: 100%;  text-align: center;
+    margin-top: 30px; font-family: Courier New, monospace;
+    font-style: oblique;
+}
+
+h3  { margin-top: 20px; text-align:justify; }
+
+.virus { text-align: center; margin-top: 30px;  color:  #180c1b; }
+
+.virus img {width: 100px; height: 100px; }
+
+section{ display: flex; flex-direction: column;  row-gap: 10px; }
+
+section > div > img { display: block; width: 100px; height: 100px; }
+
+section > div { display: flex; flex-wrap: wrap; padding: 0.5vw; }
+
+.description { width: 85%; overflow:hidden; }
+
+.description p { text-align:justify;  }
+
+.download { width: 100%; }
+
+.download img { float: right; width: 50px; height: 50px; }
+
+.download > a{ border: none;  cursor: pointer; }
+
